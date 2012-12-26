@@ -1,4 +1,4 @@
-var player = io.connect('http://shielded-wave-2749.herokuapp.com/player');
+var player = io.connect('http://' + window.location.hostname + (window.location.port ? ':' + window.location.port : '') + '/player')
 	, body = document.getElementsByTagName('body')[0]
 	, force = { l: 0, u: 0, r: 0, d: 0 }
 
