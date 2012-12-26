@@ -1,6 +1,6 @@
 var svg = d3.select('body').append('svg')
 	, players = null
-	, display = io.connect('http://localhost/display');
+	, display = io.connect('http://shielded-wave-2749.herokuapp.com/display');
 
 display.on('connect', function () {
 });
