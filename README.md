@@ -10,4 +10,4 @@ npm install
 
 ## How to use
 
-Open (http://localhost:3000/Display)
+Open [localhost:3000/Display](http://localhost:3000/Display)
