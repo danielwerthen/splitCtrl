@@ -41,8 +41,11 @@ server.listen(app.get('port'), function(){
 });
 
 var io = sio.listen(server);
-io.set('log level', 1);
-
+io.configure(function () { 
+	io.set('log level', 1);
+  io.set("transports", ["xhr-polling"]); 
+  io.set("polling duration", 10); 
+});
 var ids = 0;
 var play = io
 	.of('/player')
@@ -70,3 +73,5 @@ setInterval(function () {
 		socket.emit('update', data);
 	});
 }, inty);
+
+console.log('running');
